@@ -1,0 +1,40 @@
+{
+	"name": "target2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_for_azure_environment",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "target_datasets"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "dept.txt",
+				"folderPath": "target",
+				"fileSystem": "samplestorage"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Deptno",
+				"type": "String"
+			},
+			{
+				"name": "Dname",
+				"type": "String"
+			},
+			{
+				"name": "Loc",
+				"type": "String"
+			}
+		]
+	}
+}
